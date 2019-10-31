@@ -1,0 +1,10 @@
+<h1>Welcome to Your Student Page <%= @student.name %>!</h1>
+
+
+<h2>Courses:</h2>
+<% @student.student_courses.each do |student_course|  %>
+  <section id="course-<%= student_course.id %>">
+    <p>Course Name: <%= student_course.course.name %></p>
+    <p>Course Grade: <%= student_course.grade %></p>
+  </section>
+<% end %>
